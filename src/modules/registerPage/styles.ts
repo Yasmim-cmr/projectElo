@@ -85,8 +85,8 @@ export const ImageRight = styled.img`
 justify-content: center;
 align-items: center;
 display:inline-block;
-width: 800px;
-height: 800px;
+width: 730px;
+height: 730px;
 `
 
 

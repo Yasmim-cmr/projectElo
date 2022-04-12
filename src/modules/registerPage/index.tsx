@@ -7,33 +7,32 @@ import validator from 'validator';
 
 export default function RegisterPage() {
 
-    const [errorMessage,setErrorMessage]= useState('')
+    const [errorMessage, setErrorMessage] = useState('')
+    const [user,setUser] = useState('')
 
-    const validate = (value: any)=>{
-        if(validator.isStrongPassword(value, {
-            minLength:8,minLowercase:1,minUppercase:1, minNumbers:1,minSymbols:1
-        })){
+    const validate = (value: any) => {
+        if (validator.isStrongPassword(value, {
+            minLength: 8, minLowercase: 1, minUppercase: 1, minNumbers: 1, minSymbols: 1
+        })) {
             setErrorMessage('Is Strong password')
-        }else{
+        } else {
             setErrorMessage('Is not Strong password')
         }
     }
-       
 
-  function validarSenha()
-  {
-    var password = document.getElementById("password")
-    var confirm_password = document.getElementById("confirm_password");   
-          
-      if (password !== confirm_password)
-      {
-          alert('senha iguais');
-      }
-      else
-      {
+
+    function validatePass() {
+        var password = document.getElementById("password")
+        var confirm_password = document.getElementById("confirm_password");
+
+        if (password !== confirm_password) {
+            alert('senha iguais');
+        }
+        else {
             alert('senhas diferentes');
-      }
-  }
+        }
+    }
+
 
     return (
         <>
@@ -52,8 +51,7 @@ export default function RegisterPage() {
                         </label>
                         <label>
                             Senha*
-                           
-                             <input type="password" onChange={(e)=> validate(e.target.value) } id="password"/>
+                            <input type="password" onChange={(e) => validate(e.target.value)} id="password" />
                             <span>
                                 {errorMessage}
                             </span>
@@ -62,10 +60,7 @@ export default function RegisterPage() {
                             Confirme a senha*
                             <input type="password" id="confirmPassword" />
                         </label>
-
-                        <button type="submit">
-                            cadastrar
-                        </button>
+                       <button  type="submit" onClick={validatePass}> <a  href='/leadsPanel'></a>Cadastrar</button> 
                     </FormContainer>
                 </HalfScreen>
 
