@@ -4,15 +4,16 @@ import RegisterPage from './modules/registerPage';
 import LeadsPanel from './modules/leadsPanel';
 
 import SaveLeads from './modules/saveLeads';
+import LeadsPage from './modules/leadPage';
 const Routes = () =>{
     return(
         <BrowserRouter>
         <Switch>
-       <Route path='/Register'>
+       <Route path='/'>
            <RegisterPage/>
        </Route>
        <Route path='/leadsPanel'>
-           <LeadsPanel/>
+           <LeadsPage/>
        </Route>
        <Route path='/registerLeads'>
           <SaveLeads/>

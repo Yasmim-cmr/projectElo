@@ -38,7 +38,7 @@ const [email, setEmail] = useState('')
         saveData('Nome', lead)
         saveData('Celular', celPhone)
         saveData('Email', email)
-        document.location.reload();
+ 
     }
     return (
         <>
